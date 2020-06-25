@@ -42,9 +42,13 @@ class App extends Component {
     return (
       <div>
         <div>
-          <ul>
-            {}
-          </ul>
+          <ul>{items.map( el => {
+            return(
+            <li key ={el.id}>
+              Name: {el.name} | UserName: {el.username} | 
+              <a href ={`https://${el.website}`}>Website</a>
+            </li>)
+          })}</ul>
         </div>
       </div>
     );
